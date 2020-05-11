@@ -1,0 +1,23 @@
+name: 'L2TP/IPSec VPN'
+description: 'Connect to L2TP/IPSec VPN'
+author: 'Kiyoshi Mizumoto'
+branding:
+  icon: 'log-in'
+  color: 'blue'
+inputs:
+  pre-shared-key:
+    description: 'Pre-Shared Key'
+    required: true
+  ip-address:
+    description: >
+      The IP address of the participant's public-network interface
+    required: true
+  username:
+    description: 'VPN username'
+    required: true
+  password:
+    description: 'VPN password'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
